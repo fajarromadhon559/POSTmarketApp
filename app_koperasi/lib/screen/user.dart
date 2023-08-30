@@ -1,6 +1,3 @@
-import 'dart:ffi';
-
-import 'package:app_koperasi/side_bar.dart';
 import 'package:flutter/material.dart';
 
 class User extends StatelessWidget {
@@ -56,14 +53,14 @@ class User extends StatelessWidget {
                   ),
                   Text(
                     'IT',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(
                     'PKL',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                   ),
                 ],
               ),

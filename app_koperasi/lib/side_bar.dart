@@ -1,3 +1,5 @@
+import 'package:app_koperasi/screen/riwayat_transaksi.dart';
+import 'package:app_koperasi/screen/user.dart';
 import 'package:flutter/material.dart';
 
 class SideBar extends StatelessWidget {
@@ -46,6 +48,20 @@ class SideBar extends StatelessWidget {
               },
             ),
           ),
+          const ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: Icon(
+              Icons.remove,
+              color: Colors.indigo,
+            ),
+            title: Text(
+              'ACCOUNT SETTING',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.indigo,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
           InkWell(
             highlightColor: Colors.indigo,
             splashColor: Colors.amber,
@@ -66,7 +82,9 @@ class SideBar extends StatelessWidget {
                 size: 16,
               ),
               onTap: () {
-                // Aksi saat item dipilih
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const User();
+                }));
               },
             ),
           ),
@@ -89,11 +107,11 @@ class SideBar extends StatelessWidget {
             splashColor: Colors.amber,
             child: ListTile(
               leading: const Icon(
-                Icons.shopping_cart,
+                Icons.history,
                 size: 26,
               ),
               title: const Text(
-                'Transaksi',
+                'Riwayat Transaksi',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.blueGrey,
@@ -104,83 +122,9 @@ class SideBar extends StatelessWidget {
                 size: 16,
               ),
               onTap: () {
-                // Aksi saat item dipilih
-              },
-            ),
-          ),
-          const ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: Icon(
-              Icons.remove,
-              color: Colors.indigo,
-            ),
-            title: Text(
-              'BARANG MASUK & KELUAR',
-              style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.indigo,
-                  fontWeight: FontWeight.w400),
-            ),
-          ),
-          InkWell(
-            highlightColor: Colors.indigo,
-            splashColor: Colors.amber,
-            child: ListTile(
-              leading: const Icon(
-                Icons.shopping_cart_checkout,
-                size: 26,
-              ),
-              title: const Text(
-                'Pembelian',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.blueGrey,
-                ),
-              ),
-              trailing: const Icon(
-                Icons.arrow_forward_ios,
-                size: 16,
-              ),
-              onTap: () {
-                // Aksi saat item dipilih
-              },
-            ),
-          ),
-          const ListTile(
-            contentPadding: EdgeInsets.zero,
-            leading: Icon(
-              Icons.remove,
-              color: Colors.indigo,
-            ),
-            title: Text(
-              'USER',
-              style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.indigo,
-                  fontWeight: FontWeight.w400),
-            ),
-          ),
-          InkWell(
-            highlightColor: Colors.indigo,
-            splashColor: Colors.amber,
-            child: ListTile(
-              leading: const Icon(
-                Icons.person_outline,
-                size: 26,
-              ),
-              title: const Text(
-                'Users',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.blueGrey,
-                ),
-              ),
-              trailing: const Icon(
-                Icons.arrow_forward_ios,
-                size: 16,
-              ),
-              onTap: () {
-                // Aksi saat item dipilih
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const RiwayatTransaksi();
+                }));
               },
             ),
           ),
