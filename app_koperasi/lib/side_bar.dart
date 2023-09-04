@@ -1,4 +1,4 @@
-import 'package:app_koperasi/screen/riwayat_transaksi.dart';
+import 'package:app_koperasi/animation/slide_up.dart';
 import 'package:app_koperasi/screen/user.dart';
 import 'package:flutter/material.dart';
 
@@ -122,9 +122,7 @@ class SideBar extends StatelessWidget {
                 size: 16,
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const RiwayatTransaksi();
-                }));
+                Navigator.of(context).push(createRoute());
               },
             ),
           ),
